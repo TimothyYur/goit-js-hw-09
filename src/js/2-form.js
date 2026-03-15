@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     console.log(formData);
+    formData.email = '';
+    formData.message = '';
     localStorage.removeItem(USER_DATA);
     form.reset();
   });
