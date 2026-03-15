@@ -81,17 +81,7 @@ const galleryMarkup = images
   .join('');
 
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
-galleryContainer.addEventListener('click', selectedImage);
-function selectedImage(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-  const instance = new SimpleLightbox(`.gallery a`, {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-  instance.on('show.simplelightbox', function () {
-    
-  });
-}
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
